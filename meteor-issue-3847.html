@@ -1,0 +1,25 @@
+<body>
+  {{> test}}
+</body>
+
+<template name="test">
+  <h3>Meteor Issue <a href="https://github.com/meteor/meteor/issues/3847">3847</a></h3>
+  <hr>
+  <ol>
+    <li>Insert test doc</li>
+    <li>Drop database</li>
+    <li>Client is now out of sync</li>
+    <li>Check server console</li>
+    <li>Insert test doc again</li>
+    <li>Refresh client to re-sync properly</li>
+  </ol>
+  <hr>
+  <span class="insert btn btn-default">Insert Test Doc</span>
+  <span class="drop-db btn btn-danger">Drop Datbase</span>
+  <hr>
+  <p>Docs:
+    {{#each testDocs}}
+      {{_id}}
+    {{/each}}
+  </p>
+</template>
